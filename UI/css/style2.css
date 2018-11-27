@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    text-decoration: none;
+    border-radius: 5px;
+}
+body{
+    background-color: lightblue;
+}
+/***************************************Navigation***************************************/
+nav {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background-color: rgb(70,70,73);
+}
+.logo {
+    font-size: 40px;
+    padding: 20px;
+    display: inline-block;
+    color: white;
+}
+.logo:hover {
+    color: black
+}
+.right {
+    float: right;
+    list-style: none;
+    display: inline-flex;
+    padding: 22px;
+}
+.right li {
+    padding: 10px;
+}
+.right li a {
+    color: white;
+}
+.right li a:hover {
+    color: black;
+}
+
+.left{
+    float: left;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(70,70,73);
+    min-width: 80px;
+    border-radius: 0px 0px 4px 4px;
+}
+.dropdown-content li {
+    list-style: none;  
+}
+.dropdown-content li:hover {
+    color: black;
+}
+.dropbtn:hover ul{
+    display: block;
+}
+/***********************************add red-flag/intervention record***********************************/
+.flag {
+    position: absolute;
+    background: rgb(70,70,73);
+    width: 600px;
+    height: 400px;
+    top: 20%;
+    left: 22%;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+.centa{
+    text-align: center;
+}
+.flag p{
+    font-weight: bold;
+    /*font-size: 30px;*/
+}
+.flag input[name="title"] , textarea {
+    width: 100%;
+    margin-bottom: 8px;
+}
+.flag input[type="text"] {
+    border-style: solid;
+    border-color: lightblue;
+    height: 40px;
+    border-radius: 10px;
+}
+.tarea {
+    border-style: solid;
+    border-color: lightblue;
+    height: 150px;
+}
+.flag input[type="submit"] {
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    height: 40px;
+    left: 45%;
+    width: 12%;
+    font-size: 16px;
+}
+.flag input[type="submit"]:hover {
+    background-color: lightblue;
+    color: white;
+}
+/***********************************view red-flag/intervention record***********************************/
+.format {
+    width: 100%;
+    padding: 50px;
+}
+.txt td, .txt th {
+    text-align: left;
+    padding: 8px;
+}
+.outline, .txt td {
+    border: red;
+    color: rgb(70,70,73);
+}
+.bc td {
+    background-color: white;
+}
+.cl {
+    text-align: center;
+    padding-top: 5%;
+}
+/***********************************Profile***********************************/
+.shape{
+    width: 244px;
+    height: 100px;
+    background-color: rgb(70,70,73);
+    color: white;
+    padding-top: 5%;
+    text-align: center;
+    border: solid;
+    border-color: lightblue;
+}
+.la {
+    float: right;
+}
+.shape:hover {
+    color: black;
+}
+.large {
+    font-size: 30px;
+}
+.cover {
+    padding: 0px 267px;
+}
+
