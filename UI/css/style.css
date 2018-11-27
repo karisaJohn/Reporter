@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: arial;
+}
+body{
+    background-color: lightblue;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(70,70,73);
+}
+#load{
+    margin-left: 1000px;
+}
+#home{
+    font-size: 40px;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    line-height: 80px;
+}
+ul li a{
+    display: block;
+    font-size: 18px;
+    
+    color: white;
+    padding: 0 20px;
+}
+ul li a:hover {
+    color: black;
+}
+#myHeader {
+    color: rgb(70, 70, 73);
+    padding: 20px;
+    font-size: 70px;
+    text-align: center;
+}
+#myParagraph {
+    color: rgb(70, 70, 73);
+    padding: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+button {
+    position: absolute;
+    left: 45%;
+}
+#btn {
+    background: rgb(70,70,73);
+    color: white;
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#btn:hover {
+    color: black;
+}
+/***************************************Login***************************************/
+#loger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 420px;
+    background: rgb(70,70,73);
+    color: white;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 70px 30px;
+}
+#hloger {
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+}
+#loger p{
+    font-weight: bold;
+    font-size: 18px;
+}
+#loger input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#loger input[type="text"], #loger input[type="password"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+}
+#loger input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: black;
+}
+#loger input[type="submit"]:hover {
+    background: lightblue;
+    color: white;
+}
+/***************************************Sign Up***************************************/
+#signer {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 320px;
+    height: 520px;
+    background: rgb(70,70,73);
+    color: white;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 50px 30px;
+}
+#hsigner {
+    margin:0;
+    padding: 0 0 20px;
+    text-align: center;
+}
+#signer p{
+    font-weight: bold;
+    font-size: 16px;
+}
+#signer input{
+    width: 100%;
+    margin-bottom: 8px;
+}
+#signer input[type="text"], #signer input[type="password"], #signer input[type="email"], #signer input[type="number"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+#signer input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: black;
+}
+#signer input[type="submit"]:hover {
+    background: lightblue;
+    color: white;
+}
+
