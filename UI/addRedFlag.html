@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>iReporter | Add Red Flag</title>
+        <link rel="stylesheet" href="css/style2.css">
+    </head>
+    <body>
+        <Nav>
+        <nav class="nav">
+            <a class="logo" href="index.html">iReporter</a>
+            <ul class="right">
+                <li><a href="profile.html">Profile</a></li>
+                <li class="dropbtn"><a href="#">Red-Flag</a>
+                    <ul class="dropdown-content">
+                        <li><a href="viewRedFlags.html">View</a></li>
+                    </ul>
+                </li>
+                <li class="dropbtn"><a href="#">Intervention</a>
+                    <ul class="dropdown-content">
+                        <li><a href="addIntervention.html">Add</a></li>
+                        <li><a href="viewInterventions.html">View</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+        </nav>
+        <div class="flag">
+            <h1 class="centa">Add Red-Flag Record</h1>
+            <form action="viewRedFlags.html">
+                <p>Title</p>
+                <input type="text" name="title" placeholder="Enter Title"><br>
+                <p>Description</p>
+                <textarea class="tarea" name="message" rows="10" cols="20" placeholder="Enter the Description"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+            <button onclick="getLocation()">Add Location</button>
+            <p id="demo"></p><br>
+        </div>         
+        <script>
+            var x = document.getElementById("demo");
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported this browser.";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+            }
+        </script> 
+    </body>
+</html>
