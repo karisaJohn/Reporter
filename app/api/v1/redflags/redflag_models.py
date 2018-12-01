@@ -58,4 +58,35 @@ class RedFlagsModel():
             if redflag['id'] == num:
                 return redflag
 
+    def edit_redflag(self, num):
+        for redflag in self.db:
+            if redflag['id'] == num :
+                if redflag['status'] == 'Draft':
+                    redflag.update(request.get_json())
+                    return {
+                        'Status' : 200,
+                        'data' : [{
+                            'id' : num,
+                            'message' : 'Upated your changes.'
+                        }]
+                    }
+                
+                elif redflag['status'] == 'Under Investigation':
+                    return {
+                        'status' : 404,
+                        'error' : 'Incident under Investigation, cannot make changes.' 
+                    }
+
+                elif redflag['status'] == 'Rejected':
+                    return {
+                        'status' : 404,
+                        'error' : 'Incident was Rejected, cannot make changes.' 
+                    }
+
+                else :
+                    return {
+                        'status' : 404,
+                        'error' : 'Incident was Resolved, cannot make changes.' 
+                    }
+
 

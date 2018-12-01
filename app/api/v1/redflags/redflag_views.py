@@ -34,5 +34,7 @@ class RedFlag(Resource, RedFlagsModel):
     def get(self, num):
         resp = self.db.get_redflag(num)
         return make_response(jsonify({"Users":resp}),200)
-
-
+    
+    def patch(self, num):
+        resp = self.db.edit_redflag(num)
+        return make_response(jsonify({"Redflag":resp}),200)
