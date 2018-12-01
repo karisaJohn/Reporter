@@ -89,4 +89,9 @@ class RedFlagsModel():
                         'error' : 'Incident was Resolved, cannot make changes.' 
                     }
 
-
+    def delete_redflag(self, num):
+        for redflag in self.db:
+            if redflag['id'] == num:
+                self.db.remove(redflag)
+                return self.db
+        return None

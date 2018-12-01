@@ -38,3 +38,7 @@ class RedFlag(Resource, RedFlagsModel):
     def patch(self, num):
         resp = self.db.edit_redflag(num)
         return make_response(jsonify({"Redflag":resp}),200)
+    
+    def delete(self, num):
+        self.db.delete_redflag(num)
+        return {"Message":"Red-Flag deleted successfully"}
