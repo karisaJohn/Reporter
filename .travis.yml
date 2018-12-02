@@ -5,7 +5,6 @@ Python:
 
 install:
   - pip install -r requirements.txt
-  - pip install codecav coveralls
 
 script:
   - py.test -v --cov-report term-missing --cov app
