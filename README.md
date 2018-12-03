@@ -4,7 +4,6 @@
 iReporter is an application that enables any citizen to bring any form of corruption to the notice of appropriate authorities. Citizens can also report on things that need government intervention.
 
 
-
 # Technology Used:
 * **Python3**
 * **Flask**
