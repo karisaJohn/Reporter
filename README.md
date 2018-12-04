@@ -41,6 +41,69 @@ $ source venv/bin/activate
 (venv) $ FLASK_APP=run.py
 (venv) $ flask run
 ```
+The app should be accessible through : http://127.0.0.1:5000/
+
+## Session Examples
+To follow along with this examples get postman app installed.
+- Set Up POSTMAN.
+
+- Create RedFlag
+
+![post man](Assets/CreateRedFlag.png)
+
+- Post data in the format below to the redflag endpoint :
+```
+/api/v1/redflags
+```
+```
+{
+"createdBy" : "John",
+"location" : "Nairobi";
+"title" : "Bribery"
+}
+```
+
+- Get all RedFlags
+
+![post man](Assets/allRedFlags.png)
+
+- Get data from the redflags endpoint :
+```
+/api/v1/redflags
+```
+
+- Get specific RedFlag
+
+![post man](Assets/getspecificRedFlag.png)
+
+- Get data from the redflags endpoint :
+```
+/api/v1/redflags/1
+```
+
+- Edit specific RedFlag
+
+![post man](Assets/editspecificRedFlag.png)
+
+- Post data in the format below to the redflag endpoint : 
+```
+/api/v1/redflag/1
+```
+```
+{
+    "description":"It has come to my notice, that....",
+    "location" : "Turkana"
+}
+```
+
+- Delete Specific RedFlag
+
+![post man](Assets/deletespecificRedFlag.png)
+
+- Delete data from the redflag endpoint :
+```
+/api/v1/redflag/3
+```
 #### Run the Tests
 ```
 (venv) $ pytest --cov=app
