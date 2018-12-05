@@ -38,12 +38,17 @@ class UsersModel():
             "phoneNumber" : phoneNumber,
             "registered" : dt.datetime.now(),
             "username" : username,
-            "isAdmin" : None
+            "isAdmin" : False
         }
-        
+
+        for person in self.db:
+            if person["username"] == data["username"]:
+                return "Username already exists!! Please pick another username"
+            elif person["email"] == data["email"] or person["phoneNumber"] == data["phoneNumber"]:
+                return "User already exists"
         self.db.append(data)
         
-        return self.db
+
 
     def get_users(self):
         return self.db
