@@ -15,10 +15,15 @@ class RedFlags(Resource, RedFlagsModel):
             return {'status' : 200, "Message" : "No input data provided"}
         data = request.get_json()
         createdBy = data['createdBy']
+        types = data['types']
         location = data['location']
+        status = data['status']
+        image = data['images']
+        video = data['videos']
         title = data['title']
+        comment = data['comment']
 
-        self.db.save(createdBy, location, title)
+        self.db.save(createdBy, types, location, image, status, video, title, comment)
         return make_response(jsonify({
             "Message": "RedFlag added successfully."
             }),201)

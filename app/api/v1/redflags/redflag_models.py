@@ -20,18 +20,18 @@ class RedFlagsModel():
             return self.db[-1]["id"] + 1
         return 1
 
-    def save(self, createdBy, location, title):
+    def save(self, createdBy, types, location, status, image, video, title, comment):
         data = {
             "id" : self.redflagid(),
-            "createdOn" : "today",
+            "createdOn" : dt.datetime.now(),
             "createdBy" : createdBy,
-            "type" : "Red-Flag",
+            "types" : types,
             "location" : location,
-            "status" : "Draft",
-            "image" : "image",
-            "video" : "video",
+            "status" : status,
+            "image" : image,
+            "video" : video,
             "title" : title,
-            "description" : "There has been some..."
+            "comment" : comment
         }
         
         self.db.append(data)
